@@ -1,0 +1,81 @@
+body {
+  font-family: LCDMono2;
+  background-color: #2a1ca8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgb(230, 232, 234);
+  padding: 40px;
+  border-radius: 50px;
+  box-shadow: 0 0 100px rgba(221, 11, 11, 0.9);
+}
+
+button {
+  background-color: #000;
+  border: 0;
+  color: #f7be04;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 20px;
+  border-radius: 15px;
+  font-family: fantasy;
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+input[type="number"] {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.strength-indicator {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#strengthValue {
+  font-weight: bold;
+}
+
+.strength-weak {
+  color: red;
+}
+
+.strength-medium {
+  color: orange;
+}
+
+.strength-strong {
+  color: green;
+}
+
+.backBtn {
+  background-color: #000;
+  color: #f7be04;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 15px;
+  font-family: fantasy;
+  transition: opacity .2s;
+}
+
+.backBtn:hover {
+  opacity: 0.8;
+}

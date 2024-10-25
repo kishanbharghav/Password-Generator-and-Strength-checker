@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check Password Strength</h1>
+        <label for="passwordInput">Enter Password:</label>
+        <input type="text" id="passwordInput" placeholder="Enter a password">
+        <button id="checkStrengthBtn">Check Strength</button>
+        <div id="strength" class="strength-indicator">Strength: <span id="strengthValue">N/A</span></div>
+
+        <!-- Back Button -->
+        <button onclick="window.location.href='/'" class="backBtn">Back</button>
+    </div>
+
+    <script>
+        document.getElementById('checkStrengthBtn').addEventListener('click', function() {
+            const password = document.getElementById('passwordInput').value;
+            const strength = checkPasswordStrength(password);
+            document.getElementById('strengthValue').textContent = strength;
+        });
+
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[\W]/.test(password)) strength++;
+            if (strength <= 1) return 'Weak';
+            else if (strength === 2) return 'Medium';
+            else if (strength >= 3) return 'Strong';
+            return 'N/A';
+        }
+    </script>
+</body>
+</html>
